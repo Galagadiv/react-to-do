@@ -6,20 +6,25 @@ function App() {
 	const [rate, setRate] = useState([]);
 
 	useEffect(() => {
+		fetchExchangeRate();
+	}, []);
+
+	const fetchExchangeRate = async () => {
 		fetch("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json")
 			.then((response) => response.json())
 			.then((data) => {
 				console.log(data);
 				setRate(data);
 			});
-	}, []);
+		alert("Reloaded");
+	};
 
 	return (
 		<div>
 			<header>
 				<h1>Курс валют</h1>
 				<div style={{height: "100%"}}>
-					<button>Reload</button>
+					<button onClick={() => fetchExchangeRate()}>Reload</button>
 				</div>
 			</header>
 			<main>
