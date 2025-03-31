@@ -1,0 +1,17 @@
+.list__header {
+	background-color: #9198a3;
+}
+.containerCollumnName {
+	display: flex;
+	text-align: center;
+	gap: 5px;
+}
+
+.CollumnAbbreviation {
+	width: 100px;
+}
+.CollumnExRate {
+	align-items: start;
+	display: flex;
+	width: 80px;
+}
