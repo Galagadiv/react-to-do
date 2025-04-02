@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.45e8115b.css",
+    "main.js": "/static/js/main.fcfd0e40.js",
+    "static/media/second-revert-icon.svg": "/static/media/second-revert-icon.0510cf9b0005129eac1574490884f89e.svg",
+    "index.html": "/index.html",
+    "main.45e8115b.css.map": "/static/css/main.45e8115b.css.map",
+    "main.fcfd0e40.js.map": "/static/js/main.fcfd0e40.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45e8115b.css",
+    "static/js/main.fcfd0e40.js"
+  ]
+}
