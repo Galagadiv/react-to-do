@@ -1,17 +1,44 @@
-.list__header {
-	background-color: #9198a3;
+ul {
+	list-style: none;
+	padding: 0;
+	margin-top: 20px;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	overflow: hidden;
 }
+
+li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 16px;
+	border-bottom: 1px solid #eee;
+}
+
+li:last-child {
+	border-bottom: none;
+}
+
+.list__header {
+	background-color: #f5f5f5;
+	font-weight: bold;
+}
+
 .containerCollumnName {
 	display: flex;
-	text-align: center;
-	gap: 5px;
+	align-items: center;
+	gap: 10px;
 }
 
 .CollumnAbbreviation {
-	width: 100px;
+	width: 40px;
+	text-align: center;
+	background-color: #ddd;
+	border-radius: 4px;
+	padding: 4px 0;
 }
-.CollumnExRate {
-	align-items: start;
-	display: flex;
-	width: 80px;
+
+.CollumnExRate h3 {
+	font-weight: 500;
 }

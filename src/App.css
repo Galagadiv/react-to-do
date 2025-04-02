@@ -1,8 +1,23 @@
 header {
 	display: flex;
-	justify-content: space-between;
-	padding: 10px;
+	width: 100%;
+	padding: 10px 0;
+}
+
+main {
+	margin: 10px 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+section {
+	display: flex;
+	flex-direction: column;
 	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 700px;
 }
 
 button {
@@ -15,13 +30,6 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-form {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px;
 }
 
 .calcContainer {

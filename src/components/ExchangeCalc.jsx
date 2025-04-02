@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useRef} from "react";
 import "./exchangecalc.css";
+import logo from "../assets/second-revert-icon.svg";
 
 const initState = {
 	rate: 1,
@@ -43,21 +44,32 @@ export default function ExchangeCalc({rate = initState}) {
 		}));
 	};
 
+	const handleRevertValues = (event) => {
+		event.preventDefault();
+
+		const temp = fromCurrencyData;
+		setfromCurrencyData(toCurrencyData);
+		settoCurrencyData(temp);
+	};
+
+	// Оновлення другого input
 	useEffect(() => {
 		settoCurrencyData((prev) => ({
 			...prev,
-			value:
-				(fromCurrencyData.value * fromCurrencyData.rate) / toCurrencyData.rate,
+			value: (
+				(fromCurrencyData.value * fromCurrencyData.rate) /
+				toCurrencyData.rate
+			).toFixed(2),
 		}));
 	}, [fromCurrencyData.value, fromCurrencyData.rate, toCurrencyData.rate]);
 
 	return (
-		<form>
+		<form onSubmit={handleRevertValues}>
 			<div className="calcContainer">
-				<label htmlFor="currencyFrom" style={{height: "100%"}}>
+				<label htmlFor="currencyFrom">
 					Валюта:
 					{/* Не можливо передати одразу об'єкт el як значення при виборі, бо
-            він конвертується в рядок "[object Object]", зате приймається число або рядок*/}
+            		він конвертується в рядок "[object Object]", зате приймається число або рядок*/}
 					<select ref={fromCurrencySelectRef} onChange={handleSelectChange}>
 						{rate.map((el) => (
 							<option key={el.cc} value={el.cc}>
@@ -71,14 +83,18 @@ export default function ExchangeCalc({rate = initState}) {
 					<input
 						type="number"
 						name="value"
-						value={fromCurrencyData.value}
+						value={+fromCurrencyData.value || 0}
 						onChange={(e) => handleChangeValues(e, setfromCurrencyData)}
 					/>
 				</label>
 			</div>
 
+			<button type="submit" style={{maxWidth: 40, maxHeight: 40}}>
+				<img src={logo} alt="Обміняти" />
+			</button>
+
 			<div className="calcContainer">
-				<label htmlFor="currencyTo" style={{height: "100%"}}>
+				<label htmlFor="currencyTo">
 					Валюта:
 					<select ref={toCurrencySelectRef} onChange={handleSelectChange}>
 						{rate.map((el) => (
@@ -93,7 +109,7 @@ export default function ExchangeCalc({rate = initState}) {
 					<input
 						type="number"
 						name="value"
-						value={toCurrencyData.value.toFixed(2)}
+						value={toCurrencyData.value ? toCurrencyData.value : 0}
 						disabled
 					/>
 				</label>

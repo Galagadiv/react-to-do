@@ -23,11 +23,15 @@ function App() {
 	return (
 		<div>
 			<header>
-				<h1>Курс валют</h1>
+				<section>
+					<h1>Курс валют</h1>
+				</section>
 			</header>
 			<main>
-				<ExchangeCalc rate={rate} />
-				<CurrencyList rate={rate} />
+				<section>
+					<ExchangeCalc rate={rate} />
+					<CurrencyList rate={rate} />
+				</section>
 			</main>
 		</div>
 	);
