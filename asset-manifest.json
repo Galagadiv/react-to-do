@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-to-do/static/css/main.45e8115b.css",
-    "main.js": "/react-to-do/static/js/main.7756495b.js",
+    "main.css": "/react-to-do/static/css/main.46315986.css",
+    "main.js": "/react-to-do/static/js/main.1d1173f2.js",
     "static/media/second-revert-icon.svg": "/react-to-do/static/media/second-revert-icon.cd55affec0016a2963a33ce3f4525f7f.svg",
     "index.html": "/react-to-do/index.html",
-    "main.45e8115b.css.map": "/react-to-do/static/css/main.45e8115b.css.map",
-    "main.7756495b.js.map": "/react-to-do/static/js/main.7756495b.js.map"
+    "main.46315986.css.map": "/react-to-do/static/css/main.46315986.css.map",
+    "main.1d1173f2.js.map": "/react-to-do/static/js/main.1d1173f2.js.map"
   },
   "entrypoints": [
-    "static/css/main.45e8115b.css",
-    "static/js/main.7756495b.js"
+    "static/css/main.46315986.css",
+    "static/js/main.1d1173f2.js"
   ]
 }
