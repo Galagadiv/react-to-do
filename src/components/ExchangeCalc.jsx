@@ -89,7 +89,7 @@ export default function ExchangeCalc({rate = initState}) {
 				</label>
 			</div>
 
-			<button type="submit" style={{maxWidth: 40, maxHeight: 40}}>
+			<button type="submit" className="revertButton">
 				<img src={logo} alt="Обміняти" />
 			</button>
 
